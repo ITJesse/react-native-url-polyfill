@@ -18,12 +18,13 @@
     "type": "git",
     "url": "https://github.com/charpeni/react-native-url-polyfill.git"
   },
-  "main": "index.js",
+  "main": "dist/index.js",
   "types": "index.d.ts",
   "scripts": {
     "test": "jest",
     "lint": "eslint .",
-    "bundle-size": "node scripts/bundle-size"
+    "bundle-size": "node scripts/bundle-size",
+    "build": "babel src --out-dir dist"
   },
   "author": "Nicolas Charpentier <nicolas.charpentier079@gmail.com>",
   "license": "MIT",
@@ -31,6 +32,8 @@
     "whatwg-url-without-unicode": "8.0.0-3"
   },
   "devDependencies": {
+    "@babel/cli": "^7.12.13",
+    "@babel/core": "^7.12.13",
     "@react-native-community/eslint-config": "^2.0.0",
     "chalk": "^4.0.0",
     "eslint": "^7.1.0",
